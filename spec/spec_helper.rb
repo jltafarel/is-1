@@ -1,4 +1,5 @@
 require 'support/factory_girl'
+require 'support/engine_controller_test'
 require 'capybara/rspec'
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -10,4 +11,9 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.after :all do
+    ActiveRecord::Base.subclasses.each(&:delete_all)
+  end
+  config.include EngineControllerTest, :type => :controller
 end
