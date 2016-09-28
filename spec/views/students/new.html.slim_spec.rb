@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "students/new", type: :view do
   before(:each) do
-    assign(:student, FactoryGirl.create(:student))
+    assign(:student, FactoryGirl.build(:student, register_number: '0000004'))
   end
 
   it "renders new student form" do
