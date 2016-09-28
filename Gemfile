@@ -17,12 +17,13 @@ gem 'bootstrap-generators', '~> 3.3.4'
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails', '~> 3.5.2'
   gem "factory_girl_rails", "~> 4.0"
   gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara'
 end
+
+gem 'web-console', group: :development
