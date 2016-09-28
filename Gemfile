@@ -14,6 +14,9 @@ gem "slim-rails"
 gem "responders"
 gem 'enumerate_it'
 gem 'bootstrap-generators', '~> 3.3.4'
+gem "select2-rails"
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 
 group :development, :test do
   gem 'byebug'
