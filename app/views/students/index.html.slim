@@ -1,0 +1,35 @@
+.page-header
+  = link_to new_student_path, class: 'btn btn-primary' do 
+    span.glyphicon.glyphicon-plus
+    |  New Student
+  h1
+    | Listing students
+
+.table-responsive
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        th
+          | Name
+        th
+          | Register number
+        th
+          | Status
+        th
+        th
+        th
+    tbody
+      - @students.each do | student |
+        tr
+          td
+            = student.name
+          td
+            = student.register_number
+          td
+            = student.status_humanize
+          td
+            = link_to 'Show', student
+          td
+            = link_to 'Edit', edit_student_path(student) 
+          td
+            = link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } 
