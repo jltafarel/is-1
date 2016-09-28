@@ -12,6 +12,8 @@
         th
           = t('views.classrooms.student')
         th
+          = t('views.classrooms.student_name')
+        th
           = t('views.classrooms.course')
         th
           = t('views.classrooms.entry_at')
@@ -22,6 +24,8 @@
         tr
           td
             = classroom.student.register_number
+          td
+            = classroom.student.name
           td
             = classroom.course.name
           td
