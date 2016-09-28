@@ -1,0 +1,11 @@
+en:
+  enumerations:
+    status:
+      active: "Active"
+      inactive: "Inactive"
+
+pt-BR:
+  enumerations:
+    status:
+      active: "Ativo"
+      inactive: "Inativo"
