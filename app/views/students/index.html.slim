@@ -1,20 +1,20 @@
 .page-header
   = link_to new_student_path, class: 'btn btn-primary' do 
     span.glyphicon.glyphicon-plus
-    |  New Student
+    = t('views.students.new')
   h1
-    | Listing students
+    = t('views.students.listing')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
         th
-          | Name
+          = t('views.students.name')
         th
-          | Register number
+          = t('views.students.register_number')
         th
-          | Status
+          = t('views.students.status')
         th
         th
         th
@@ -28,8 +28,8 @@
           td
             = student.status_humanize
           td
-            = link_to 'Show', student
+            = link_to t('views.show'), student
           td
-            = link_to 'Edit', edit_student_path(student) 
+            = link_to t('views.edit'), edit_student_path(student) 
           td
-            = link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to t('views.destroy'), student, method: :delete, data: { confirm: 'Are you sure?' } 

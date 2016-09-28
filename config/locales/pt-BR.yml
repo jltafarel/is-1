@@ -1,6 +1,23 @@
 ---
 pt-BR:
   activerecord:
+    models:
+      classroom: matrícula
+      course: curso
+      student: aluno
+    attributes:
+      classroom:
+        student: Aluno
+        course: Curso
+        entry_at: Matriculado em
+      course:
+        name: Nome
+        description: Descrição
+        status: Situação
+      student:
+        name: Nome
+        register_number: Número de registro
+        status: Situação
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -216,3 +233,38 @@ pt-BR:
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
     pm: ''
+  views:
+    show: Abrir
+    edit: Editar
+    destroy: Excluir
+    back: Voltar
+    header:
+      app_name: Gerenciador de matrículas
+      classrooms: Matrículas
+      courses: Cursos
+      students: Alunos
+    classrooms:
+      listing: Listando matrículas
+      student: Registro do aluno
+      student_name: Nome do aluno
+      course: Curso
+      entry_at: Matriculado em
+      new: Nova matrícula
+      editing: Editando matrícula
+      showing: Mostrando matrícula
+    courses:
+      listing: Listando cursos
+      name: Nome
+      description: Descrição
+      status: Situação
+      new: Novo curso
+      editing: Editando curso
+      showing: Mostrando curso
+    students:
+      listing: Listando alunos
+      name: Nome
+      register_number: Registro
+      status: Situação
+      new: Novo aluno
+      editing: Editando aluno
+      showing: Mostrando aluno

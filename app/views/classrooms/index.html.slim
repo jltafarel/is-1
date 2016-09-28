@@ -1,20 +1,20 @@
 .page-header
   = link_to new_classroom_path, class: 'btn btn-primary' do 
     span.glyphicon.glyphicon-plus
-    |  New Classroom
+    = t('views.classrooms.new')
   h1
-    | Listing classrooms
+    = t('views.classrooms.listing')
 
 .table-responsive
   table.table.table-striped.table-bordered.table-hover
     thead
       tr
         th
-          | Student
+          = t('views.classrooms.student')
         th
-          | Course
+          = t('views.classrooms.course')
         th
-          | Entry at
+          = t('views.classrooms.entry_at')
         th
         th
         th
@@ -22,14 +22,14 @@
       - @classrooms.each do | classroom |
         tr
           td
-            = classroom.student.name
+            = classroom.student.register_number
           td
             = classroom.course.name
           td
             = classroom.formatted_entry_at
           td
-            = link_to 'Show', classroom
+            = link_to t('views.show'), classroom
           td
-            = link_to 'Edit', edit_classroom_path(classroom) 
+            = link_to t('views.edit'), edit_classroom_path(classroom) 
           td
-            = link_to 'Destroy', classroom, method: :delete, data: { confirm: 'Are you sure?' } 
+            = link_to t('views.destroy'), classroom, method: :delete, data: { confirm: 'Are you sure?' } 

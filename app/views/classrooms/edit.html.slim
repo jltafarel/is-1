@@ -1,12 +1,11 @@
 .page-header
   = link_to classrooms_path, class: 'btn btn-default' do
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    = t('views.back')
   = link_to @classroom, class: 'btn btn-primary' do
     span.glyphicon.glyphicon-info-sign
-    |  Show 
+    = t('views.show')
   h1
-    | Editing 
-    | classroom
+    = t('views.classrooms.editing')
 
 = render 'form'

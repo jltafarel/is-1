@@ -24,18 +24,15 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          = link_to "Project name", "#", class: "navbar-brand"
+          = link_to t('views.header.app_name'), "/", class: "navbar-brand"
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.active
-              a href="#"
-                | Home
             li
-              a href="#about"
-                | About
+              = link_to t('views.header.classrooms'), classrooms_path
             li
-              a href="#contact"
-                | Contact
+              = link_to t('views.header.students'), students_path
+            li
+              = link_to t('views.header.courses'), courses_path
     .container
       - flash.each do |name, msg|
         = content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do

@@ -1,22 +1,22 @@
 .page-header
   = link_to students_path, class: 'btn btn-default' do 
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    = t('views.back')
   = link_to edit_student_path(@student), class: 'btn btn-primary' do 
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    = t('views.back')
   h1
-    | Show student
+    = t('views.students.showing')
 dl.dl-horizontal
   dt
-    | Name:
+    = t('views.students.name')
   dd
     = @student.name
   dt
-    | Register number:
+    = t('views.students.register_number')
   dd
     = @student.register_number
   dt
-    | Status:
+    = t('views.students.status')
   dd
     = @student.status_humanize

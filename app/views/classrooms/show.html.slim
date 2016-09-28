@@ -1,22 +1,27 @@
 .page-header
   = link_to classrooms_path, class: 'btn btn-default' do 
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    = t('views.back')
   = link_to edit_classroom_path(@classroom), class: 'btn btn-primary' do 
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    = t('views.edit')
   h1
-    | Show classroom
+    = t('views.classrooms.showing')
+    
 dl.dl-horizontal
   dt
-    | Student:
+    = t('views.classrooms.student')
+  dd
+    = @classroom.student.register_number
+  dt
+    = t('views.classrooms.student_name')
   dd
     = @classroom.student.name
   dt
-    | Course:
+    = t('views.classrooms.course')
   dd
     = @classroom.course.name
   dt
-    | Entry at:
+    = t('views.classrooms.entry_at')
   dd
     = @classroom.formatted_entry_at

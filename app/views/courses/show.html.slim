@@ -1,22 +1,23 @@
 .page-header
   = link_to courses_path, class: 'btn btn-default' do 
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    = t('views.back')
   = link_to edit_course_path(@course), class: 'btn btn-primary' do 
     span.glyphicon.glyphicon-pencil
-    |  Edit 
+    = t('views.edit')
   h1
-    | Show course
+    = t('views.courses.showing')
+  h1
 dl.dl-horizontal
   dt
-    | Name:
+    = t('views.courses.name')
   dd
     = @course.name
   dt
-    | Description:
+    = t('views.courses.description')
   dd
     = @course.description
   dt
-    | Status:
+    = t('views.courses.status')
   dd
     = @course.status_humanize

@@ -1,9 +1,8 @@
 .page-header
   = link_to courses_path, class: 'btn btn-default' do 
     span.glyphicon.glyphicon-list-alt
-    |  Back 
+    = t('views.back')
   h1
-    | New 
-    | course
+    = t('views.courses.new')
 
 = render 'form'
