@@ -86,12 +86,7 @@ RSpec.describe StudentsController, type: :controller do
       it "updates the requested student" do
         put :update, id: student.to_param, student: new_attributes, session: valid_session
         student.reload
-        expect {student.name}.to eq('Bar Foo')
-      end
-
-      it "assigns the requested student as @student" do
-        student = Student.create! valid_attributes
-        expect(assigns(:student)).to eq(student)
+        expect(student.name).to eq('Bar Foo')
       end
 
       it "redirects to the student" do
@@ -115,6 +110,7 @@ RSpec.describe StudentsController, type: :controller do
 
   describe "DELETE #destroy" do
     it "destroys the requested student" do
+      get :show, id: student.to_param, session: valid_session
       expect {
         delete :destroy, id: student.to_param, session: valid_session
       }.to change(Student, :count).by(-1)
