@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe "classrooms/new", type: :view do
   before(:each) do
     assign(:classroom, FactoryGirl.build(:classroom))
+    assign(:students, Student.all)
+    assign(:courses, Course.all)
   end
 
   it "renders new classroom form" do

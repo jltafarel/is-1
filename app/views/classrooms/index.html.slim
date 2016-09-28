@@ -17,7 +17,6 @@
           = t('views.classrooms.entry_at')
         th
         th
-        th
     tbody
       - @classrooms.each do | classroom |
         tr
@@ -29,7 +28,5 @@
             = classroom.formatted_entry_at
           td
             = link_to t('views.show'), classroom
-          td
-            = link_to t('views.edit'), edit_classroom_path(classroom) 
           td
             = link_to t('views.destroy'), classroom, method: :delete, data: { confirm: 'Are you sure?' } 

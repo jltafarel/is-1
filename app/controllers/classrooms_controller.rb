@@ -1,6 +1,6 @@
 class ClassroomsController < ApplicationController
   before_action :set_classroom, only: [:show, :edit, :update, :destroy]
-  before_action :set_students_and_courses, only: [:new, :edit]
+  before_action :set_students_and_courses, only: [:new, :edit, :update, :create]
 
   respond_to :html
 

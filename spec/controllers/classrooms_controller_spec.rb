@@ -37,14 +37,6 @@ RSpec.describe ClassroomsController, type: :controller do
     end
   end
 
-  describe "GET #edit" do
-    it "assigns the requested classroom as @classroom" do
-      classroom = Classroom.create! valid_attributes
-      get :edit, id: classroom.to_param, session: valid_session
-      expect(assigns(:classroom)).to eq(classroom)
-    end
-  end
-
   describe "POST #create" do
     context "with valid params" do
       it "creates a new Classroom" do
